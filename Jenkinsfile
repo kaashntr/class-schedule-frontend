@@ -26,6 +26,9 @@ pipeline {
             }
         }
         stage('Build Docker frontend Image') {
+            tools {
+                docker 'docker'
+            }
             environment {
                 DOCKER_HUB_CREDENTIALS_ID = 'docker-hub-pat-credentials'
                 DOCKER_HUB_USERNAME = 'kaashntr' // Your Docker Hub username
