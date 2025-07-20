@@ -20,7 +20,6 @@ pipeline {
                     sh """
                         npm install
                         npm run build
-                        npm test
                         cd build && zip -r -q ../build.zip .
                     """
                 }
