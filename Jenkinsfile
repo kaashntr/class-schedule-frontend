@@ -27,8 +27,6 @@ pipeline {
         }
         stage('Build Docker frontend Image') {
             environment {
-                DOCKER_HOME = tool name: 'docker' // Use the name you configured
-                PATH = "${DOCKER_HOME}/bin:${env.PATH}"
                 DOCKER_HUB_CREDENTIALS_ID = 'docker-hub-pat-credentials'
                 DOCKER_HUB_USERNAME = 'kaashntr' // Your Docker Hub username
                 APP_NAME = 'blood_is_fuel'
